@@ -29,6 +29,11 @@ public class AddressBookDemo
         	sampleDetails[i]=new ContactDetails(cmds[0],cmds[1],cmds[2]);
         	i++;
         }
+        book = new AddressBook();
+        for(ContactDetails details : sampleDetails) {
+            book.addDetails(details);
+        }
+        interaction = new AddressBookTextInterface(book);
     }
 
     /**
